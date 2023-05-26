@@ -1,19 +1,21 @@
-
-import React, { useContext } from 'react'
-import {    DeliverBoy } from '../context/userscontext';
+import React, { useContext } from "react";
+import { AppContext } from "../context/userscontext";
+import './style.css'
 
 const Child = () => {
-  const userData=useContext(DeliverBoy);
-  return(
+  const userData = useContext(AppContext);
+  return (
     <>
-    <h2 style={{maxWidth:350,marginLeft:570,textAlign:'center'}}>
-      <p>
-        MESSAGE FROM CHILD::<br/>
-       My name is {userData.name} & my age is {userData.age}
-      </p>
-    </h2>
+      <div className="container width">
+        Im child
+        <div className="container">
+          <p>
+            My name is {userData.name} & my age is {userData.age}
+          </p>
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Child
+export default Child;

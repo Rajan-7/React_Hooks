@@ -1,16 +1,17 @@
 import { createContext } from "react";
 
-const DeliverBoy=createContext();
+const AppContext = createContext(); //context which provide data to the respective children
 
-const MainSource=({children})=>{
-    const userData={
-        name:'Jhon',
-        age:20,
-    };
-    return <DeliverBoy.Provider value={userData}>
-      {children}
-    </DeliverBoy.Provider>
-}
- 
+const AppContextProvider = ({ children }) => {
+  // Global state where data are located opt+shift+k=
+  const userData = {
+    name: "Possible",
+    age: 20,
+  };
+  //to wrap a grandparent i.e App components ,children is given inside the return
+  return <AppContext.Provider value={userData}>
+    {children}
+  </AppContext.Provider>;
+};
 
-export {DeliverBoy,MainSource}
+export { AppContext, AppContextProvider };

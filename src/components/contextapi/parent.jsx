@@ -1,19 +1,18 @@
-import React, { useContext } from 'react'
-import Child from './child'
+import React, { useContext } from "react";
+import Child from "./child";
+import "./style.css";
 // import { AppContext, AppProvider } from '../context/userscontext'
-
 
 const Parent = () => {
   // const userData=useContext(AppContext);
   return (
-    <>
-      <h2 style={{maxWidth:350,marginLeft:570,textAlign:'center'}}>
-        Hi this is parent<br/>
-        {/* My children name is {userData.name} */}
-      </h2>
-      <Child/>
-    </>
-  )
-}
+    <div className="container width height">
+      <div className="container">
+        <h2>Hi this is parent</h2>
+        <Child />
+      </div>
+    </div>
+  );
+};
 
-export default Parent
+export default Parent;
