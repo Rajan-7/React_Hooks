@@ -5,7 +5,7 @@ const AppContext = createContext(); //context which provide data to the respecti
 const AppContextProvider = ({ children }) => {
   // Global state where data are located opt+shift+k=
   const userData = {
-    name: "Possible",
+    name: "Rose",
     age: 20,
   };
   //to wrap a grandparent i.e App components ,children is given inside the return
